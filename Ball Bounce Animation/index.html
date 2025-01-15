@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Bounce Animation</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .box {
+        position: relative;
+        background-color: blueviolet;
+        width: 80vw;
+        height: 80vh;
+        border-radius: 9px;
+        margin: 10px;
+        overflow: hidden;
+    }
+
+    .ball {
+        background-color: aqua;
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    #ball1 {
+        animation: ballMove 4s linear infinite, ballBounce 1s ease-out infinite alternate;
+    }
+
+    #ball2 {
+        animation: ballMove 2s linear infinite, ballBounce 0.5s ease-out infinite alternate;
+    }
+
+    @keyframes ballMove {
+        from {
+            left: 0;
+        }
+
+        to {
+            left: 100%;
+        }
+    }
+
+    @keyframes ballBounce {
+        from {
+            bottom: 0;
+        }
+
+        to {
+            bottom: 40%;
+        }
+    }
+</style>
+
+<body>
+    <div class="box">
+        <div id="ball1" class="ball"></div>
+    </div>
+
+    <div class="box">
+        <div id="ball1" class="ball"></div>
+        <div id="ball2" class="ball"></div>
+    </div>
+</body>
+
+</html>
