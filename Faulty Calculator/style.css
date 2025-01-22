@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    font-size: 25px;
+}
+
+#calculator {
+    background-color: grey;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#calculator>div {
+    margin: 30px;
+}
+
+#faulty-cal,
+#Accurate-cal {
+    background-color: black;
+    border-radius: 9px;
+    padding: 10px;
+    box-shadow: 0px 0px 20px 5px black;
+}
+
+h2 {
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.display {
+    text-align: end;
+    position: relative;
+}
+
+.result {
+    outline: none;
+    border: none;
+    padding: 5px;
+    font-size: 48px;
+    width: 13rem;
+    background-color: black;
+    color: white;
+    text-align: end;
+}
+
+.prev-calc {
+    color: white;
+    position: absolute;
+    top: -7px;
+    right: 0;
+    opacity: 0.7;
+}
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 13rem;
+    justify-content: space-between;
+}
+
+button {
+    margin: 6px;
+    height: 65px;
+    flex-basis: 21%;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: rgb(254, 76, 0);
+    color: white;
+    font-size: 18px;
+}
+
+button[data-operand='0'] {
+    border-radius: 9px;
+    flex-basis: 45%;
+}
+
+
+@media screen and (max-width: 425px) {
+    #calculator>div {
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .result {
+        font-size: 18px;
+        width: -webkit-fill-available;
+    }
+
+    .btn-container {
+        width: 9rem;
+    }
+
+    button {
+        height: 45px;
+        flex-basis: 19%;
+    }
+}

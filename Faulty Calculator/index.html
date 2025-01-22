@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div id="calculator">
+        <!-- False calculation
+        It performs wrong operations 10% of the times.
+        1. + -> *
+        2. - -> /
+        3. * -> -
+        4. / -> **
+         -->
+        <!-- Faulty Calculator -->
+        <div>
+            <h2>Faulty Calculator</h2>
+            <div id="faulty-cal">
+                <div class="display">
+                    <span class="prev-calc"></span>
+                    <input type="text" class="result" readonly>
+                </div>
+                <div class="btn-container"></div>
+            </div>
+        </div>
+
+        <!-- Accurate Calculator -->
+        <div>
+            <h2>Accurate Calculator</h2>
+            <div id="Accurate-cal">
+                <div class="display">
+                    <span class="prev-calc"></span>
+                    <input type="text" class="result" readonly>
+                </div>
+                <div class="btn-container"></div>
+            </div>
+        </div>
+
+        <!-- Correct Calculator -->
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
