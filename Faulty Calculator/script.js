@@ -6,10 +6,10 @@ calcBtnValues.forEach((calcBtnVal) => {
         let count = 0;
         while (count < 2) {
                 if (calcBtnVal == "back") {
-                        btns[count].innerHTML += `<button data-operand="back"><i class="fa-solid fa-delete-left"></i></button>`;
+                        btns[count].innerHTML += `<button data-operand="back" title="back" aria-label="back"><i class="fa-solid fa-delete-left"></i></button>`;
                 }
                 else {
-                        btns[count].innerHTML += `<button data-operand="${calcBtnVal}">${calcBtnVal}</button>`;
+                        btns[count].innerHTML += `<button data-operand="${calcBtnVal}" title=${calcBtnVal} aria-label=${calcBtnVal}>${calcBtnVal}</button>`;
                 }
                 count++;
         }
@@ -21,19 +21,20 @@ let acCount = 0;
 
 const getRandomNum = () => {
         const randomNumber = Math.floor(Math.random() * 101);
+        return randomNumber;
 }
 
 
 // Add event listeners
 function clickCalBtn(ind) {
         btns[ind].addEventListener('click', event => {
-
+                
                 // Ensure the click is on a button
                 const target = event.target.closest('button');
                 if (!target) return; // Exit if the click is not on a button
-
+                
                 const operation = target.getAttribute('data-operand');
-
+                
                 switch (operation) {
                         case '=':
                                 result[ind].style.height = '5rem';
@@ -41,7 +42,7 @@ function clickCalBtn(ind) {
                                 // Calculate the result
                                 try {
                                         try {
-                                                if (ind == 0 && randomNumber < 10) {
+                                                if (ind == 0 && getRandomNum() < 10) {
                                                         let operator = result[ind].value.match(/[\+\-\*\%\/]/g);
 
                                                         if (operator && operator.length > 0) { // Ensure an operator is found

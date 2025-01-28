@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomly Colored Boxes</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .boxes {
+        text-align: center;
+        width: 80px;
+        height: 80px;
+        border: 2px solid black;
+        border-radius: 9px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="boxes">Box 1</div>
+        <div class="boxes">Box 2</div>
+        <div class="boxes">Box 3</div>
+        <div class="boxes">Box 4</div>
+        <div class="boxes">Box 5</div>
+    </div>
+
+
+    <script>
+        const getRandomNum = () => {
+            return Math.floor(Math.random() * 256);
+        }
+
+        const boxes = document.querySelectorAll('.boxes');
+
+        boxes.forEach(box => {
+            let colorCode1 = getRandomNum();
+            let colorCode2 = getRandomNum();
+            let colorCode3 = getRandomNum();
+            box.style.backgroundColor = `rgb(${colorCode1} ${colorCode2} ${colorCode3})`;
+        })
+    </script>
+</body>
+
+</html>
