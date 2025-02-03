@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Hacking Simulator</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Visual Map -->
+        <div class="visual-map">
+            <h2>Visual Map</h2>
+            <div id="map" style="height: 300px;"></div>
+        </div>
+
+        <!-- Command Console -->
+        <div class="command-console">
+            <h2>Command Console</h2>
+            <div id="output"></div>
+            <div class="input-line">
+                <span class="prompt">root@Admin></span>
+                <input type="text" id="command-input" autofocus>
+            </div>
+        </div>
+
+        <!-- System Stats -->
+        <div class="system-stats">
+            <h2>System</h2>
+            <div class="stats">
+                <p>Score: <span id="score">75</span></p>
+                <p>Trace: <span id="trace">44%</span></p>
+                <p>Money: <span id="money">$3000</span></p>
+            </div>
+        </div>
+
+        <!-- Emails -->
+        <div class="emails">
+            <h2>E-mails</h2>
+            <div class="email-content">
+                <p><b>FROM:</b> admin@hacker.com</p>
+                <p><b>SUBJECT:</b> Transfer money</p>
+                <p>
+                    In order to steal the money from the ATM, you must first connect:<br>
+                    <code>connect rv1.hacker.atm</code><br><br>
+                    Then transfer the amount:<br>
+                    <code>transfer 1000</code>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
